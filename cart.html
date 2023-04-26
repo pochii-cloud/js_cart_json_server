@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css"/>
+    <link rel="stylesheet" href="modal.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            
+            <h1>KISHOP CHETU</h1>
+           
+            <div class="shopping">
+                <h3><ion-icon name="cart-outline"></ion-icon></h3>
+                <span class="quantity">0</span>
+            </div>
+           
+            
+        </header>
+        <button class="btn1">Add Product</button>
+        <section class="modal hidden">
+            <div class="flex">
+              <button class="btn1-close">⨉</button>
+            </div>
+            <div>
+                <div class="form" id="form">
+                    <h3>Add Products</h3>
+                    <div class="form-content">
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label for="name"> Product Name </label><br>
+                                <input type="text" id="p_name" required="required">
+                            </div>
+            
+                            <div class="form-control">
+                                <label for="image"> Product Image </label><br>
+                                <input type="text" id="p_image" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <div class="form-control">
+                                <label for="description"> Product Description </label><br>
+                                <input type="text" id="p_description" required>
+                            </div>
+            
+                            <div class="form-control">
+                                <label for="price"> Product Price </label><br>
+                                <input type="text" id="p_price" required>
+                            </div>
+                        </div>
+            
+                        <div class="form-group1">
+                            <button id="btn">Add Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+          
+          <div class="overlay hidden"></div>
+         
+        
+      
+         
+        <div class="list"></div>
+    </div>
+    <div class="card">
+        <h1>My Cart</h1>
+        <ul class="listCard"></ul>
+        <div class="checkout">
+            <div class="total">Total:0</div>
+            <div class="closeShopping">close</div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+    <script src="modal.js"></script>
+</body>
+</html>

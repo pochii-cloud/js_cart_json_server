@@ -1,0 +1,191 @@
+
+*{
+  margin: 0;
+  padding: 0;
+
+}body {
+  background-color: #e3e7e8;
+  font-family:'Courier New', Courier, monospace;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 40vw;
+  margin: 20px 50px;
+}
+header .shopping {
+  position: relative;
+  text-align: right;
+}
+header .shopping ion-icon {
+  font-size: 35px;
+}
+header .shopping span {
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: -8px;
+  left: 100%;
+  padding: 5px 10px;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 100px;
+}
+.list img{
+  height: 150px;
+  width: 200px;
+}
+.item {
+    background-color: #dce0e1;
+    padding: 20px;
+    box-shadow: 0 20px 20px #757676;
+    letter-spacing: 1px;
+  }
+.card {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 30vw;
+  background-color: black;
+  height: 100vh;
+  transition: 0.5s;
+}
+.card h1 {
+  color: white;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.card .checkout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.card .checkout div {
+  background-color: rgb(170, 9, 9);
+  color: white;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.card .checkout div:nth-child(2) {
+  background-color: rgb(37, 7, 107);
+  color: white;
+}
+.active .card {
+  left: 70%;
+}
+.active .container {
+  transform: translateX(-200px);
+} 
+.listCard li{
+ display: flex;
+ align-items: center;
+  color: white;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.listCard li div{
+  display: flex;
+align-items: flex-start;
+}
+.listCard li img{
+  width: 15%;
+  height: 55%;
+}
+.listCard button{
+  width: auto;
+  background-color: #fff5;
+  border: none;
+  margin: 0 10px;
+  padding: 5px;
+}
+.listCard .count{
+  margin: 0 10px;
+}
+.content{
+  position: absolute;
+  margin-left: 100px;
+}
+.price{
+  margin: 0px 5px;
+}
+.form{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li{
+  list-style: none;
+  font-size: 25px;
+  font-weight: bolder;
+}
+#btn{
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+@media screen and (max-width:1050px) {
+  .listCard li div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width:768px) {
+  .list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .listCard li div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+
+}
+@media screen and (max-width:600px) {
+  .list{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
