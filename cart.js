@@ -123,11 +123,15 @@ async function initApp() {
     let newDiv = document.createElement("div");
     newDiv.classList.add("item");
     newDiv.innerHTML += `<img src="${value.productImage}" height=150px/>
-         <div class="title">${value.productName}</div>
-         <div class="price">${value.productPrice}</div>
+         <div class="title"><b>${value.productName}</b></div>
+         <div class="description">${value.productDescription}</div>
+         
+         <div class="card-butttons">
+         <div class="price">Ksh.${value.productPrice}</div>  
          <ion-icon name="cart-outline" onclick="addToCard(${key})"></ion-icon>
          <ion-icon name="trash-outline" onclick="deleteProduct(${value.id})"></ion-icon>
-         <ion-icon name="create-outline" onclick="updateProduct(${value.id})"></ion-icon>
+         <ion-icon name="create-outline" onclick="updateProduct(${value.id})"></ion-icon></div>
+        
         `;
     list.appendChild(newDiv);
   });

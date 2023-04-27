@@ -4,7 +4,7 @@
   padding: 0;
 
 }body {
-  background-color: #e3e7e8;
+  background-color: #FFFF;
   font-family:'Courier New', Courier, monospace;
 }
 .container {
@@ -49,15 +49,27 @@ header .shopping span {
   padding: 100px;
 }
 .list img{
-  height: 150px;
-  width: 200px;
+   width: 100%;
 }
 .item {
-    background-color: #dce0e1;
+    background-color: #F6F6F6;
     padding: 20px;
-    box-shadow: 0 20px 20px #757676;
+    box-shadow: 0 20px 20px #dce0e1;
     letter-spacing: 1px;
   }
+  .card-butttons{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+  }
+  .card-butttons ion-icon{
+    font-size: 20px;
+    padding: auto;
+    color: black;
+  }
+  
 .card {
   position: fixed;
   top: 0;
@@ -135,6 +147,21 @@ align-items: flex-start;
 }
 .price{
   margin: 0px 5px;
+  color: black;
+  opacity: .9;
+  font-weight: 400;
+  font-size: 14px;
+}
+.description{
+  width: 70%;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 12px;
+  margin-top: 10px;
+
 }
 .form{
   display: grid;
